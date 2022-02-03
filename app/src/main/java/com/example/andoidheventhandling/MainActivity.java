@@ -31,11 +31,9 @@ public class MainActivity extends AppCompatActivity  {
 
         Intent intent = new Intent(this,SecundActivity.class);
 
-        Bundle b = new Bundle();
-        b.putString(Consts.ConstName,txtForm.getText().toString());
-        b.putInt(Consts.ConstAge ,26);
+        intent.putExtra(Consts.ConstName,txtForm.getText().toString());
+        intent.putExtra(Consts.ConstAge ,26);
 
-        intent.putExtras(b);
         startActivity(intent);
     }
 }
