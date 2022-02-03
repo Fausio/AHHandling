@@ -3,47 +3,33 @@ package com.example.andoidheventhandling;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.nfc.Tag;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity  {
 
 
-    private static String TAG = ConstraintLayout.class.getSimpleName();
-    private ConstraintLayout layout ;
+    private EditText txtForm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main); // link the active with this java file
 
-        layout = findViewById(R.id.MyConstraintLayout);
-
-        Button btn1 = findViewById(R.id.button1);
-        Button btn2 = findViewById(R.id.button2);
-
-        btn1.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                layout.setBackgroundColor(Color.DKGRAY);
-                Log.i(TAG, "btn Clicked 1");
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener(){
-
-            public void onClick(View v){
-                layout.setBackgroundColor(Color.RED);
-                Log.i(TAG, "btn Clicked 1");
-            }
-        });
-
-
+        txtForm =(EditText) findViewById(R.id.editTextTextPersonName2);
     }
 
+
+    public void SumitInfo(View view) {
+
+        Intent intent = new Intent(this,SecundActivity.class);
+        startActivity(intent);
+    }
 }
