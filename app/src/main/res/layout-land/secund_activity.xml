@@ -9,10 +9,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="294dp"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="384dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="106dp"
         android:gravity="center"
         android:text="TextView"
         android:textSize="40sp"
@@ -20,15 +20,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="201dp"
         android:layout_height="208dp"
-        app:srcCompat="@drawable/pic1"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="73dp" />
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="246dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pic2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
