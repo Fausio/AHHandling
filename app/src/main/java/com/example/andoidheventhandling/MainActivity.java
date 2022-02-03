@@ -30,6 +30,12 @@ public class MainActivity extends AppCompatActivity  {
     public void SumitInfo(View view) {
 
         Intent intent = new Intent(this,SecundActivity.class);
+
+        Bundle b = new Bundle();
+        b.putString(Consts.ConstName,txtForm.getText().toString());
+        b.putInt(Consts.ConstAge ,26);
+
+        intent.putExtras(b);
         startActivity(intent);
     }
 }
