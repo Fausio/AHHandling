@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity  {
 
 
     private static String TAG = ConstraintLayout.class.getSimpleName();
@@ -22,31 +22,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.activity_main); // link the active with this java file
 
-
         layout = findViewById(R.id.MyConstraintLayout);
 
-        Button btn1 = findViewById(R.id.button1); // Download
-        Button btn2 = findViewById(R.id.button2); // Send Mssage
+        Button btn1 = findViewById(R.id.button1);
+        Button btn2 = findViewById(R.id.button2);
 
-        btn1.setOnClickListener(MainActivity.this);
-        btn2.setOnClickListener(MainActivity.this);
-    }
+        btn1.setOnClickListener(new View.OnClickListener(){
 
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
-
-            case R.id.button1:
+            public void onClick(View v){
                 layout.setBackgroundColor(Color.DKGRAY);
                 Log.i(TAG, "btn Clicked 1");
-                break;
+            }
+        });
 
-            case R.id.button2:
-                layout.setBackgroundColor(Color.MAGENTA);
-                Log.i(TAG, "btn Clicked 2");
-                break;
-        }
+        btn2.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                layout.setBackgroundColor(Color.RED);
+                Log.i(TAG, "btn Clicked 1");
+            }
+        });
+
 
     }
+
 }
